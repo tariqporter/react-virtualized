@@ -10,13 +10,15 @@ const styles = {
     display: 'flex',
   },
   root_dragging: {
-    background: '#777',
+    background: '#fff',
     zIndex: 1,
     position: 'relative',
     opacity: 0.5,
   },
   root_shadow: {
-    background: '#469C72',
+    background: '#eee',
+    borderTop: '1px solid #ddd',
+    color: 'rgba(0, 0, 0, 0)',
   },
 };
 
