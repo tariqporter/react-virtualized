@@ -5,6 +5,7 @@ import defaultCellRenderer from './defaultCellRenderer';
 import defaultHeaderRowRenderer from './defaultHeaderRowRenderer.js';
 import defaultHeaderRenderer from './defaultHeaderRenderer';
 import defaultRowRenderer from './defaultRowRenderer';
+import DraggableRowRenderer from './DraggableRowRenderer';
 import Column from './Column';
 import SortDirection from './SortDirection';
 import SortIndicator from './SortIndicator';
@@ -18,6 +19,7 @@ export {
   defaultHeaderRowRenderer,
   defaultHeaderRenderer,
   defaultRowRenderer,
+  DraggableRowRenderer,
   Column,
   SortDirection,
   SortIndicator,
