@@ -24,6 +24,7 @@ export {
   defaultHeaderRenderer as defaultTableHeaderRenderer,
   defaultHeaderRowRenderer as defaultTableHeaderRowRenderer,
   defaultRowRenderer as defaultTableRowRenderer,
+  DraggableRowRenderer,
   Table,
   Column,
   SortDirection,
