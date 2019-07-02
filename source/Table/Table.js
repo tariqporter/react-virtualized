@@ -166,6 +166,12 @@ export default class Table extends React.PureComponent {
     rowGetter: PropTypes.func.isRequired,
 
     /**
+     * Callback responsible for returning a unique key for the row
+     * ({ index: number }): any
+     */
+    rowKeyGetter: PropTypes.func,
+
+    /**
      * Either a fixed row height (number) or a function that returns the height of a row given its index.
      * ({ index: number }): number
      */
@@ -241,6 +247,7 @@ export default class Table extends React.PureComponent {
     noRowsRenderer: () => null,
     onRowsRendered: () => null,
     onScroll: () => null,
+    rowKeyGetter: null,
     overscanIndicesGetter: accessibilityOverscanIndicesGetter,
     overscanRowCount: 10,
     rowRenderer: defaultRowRenderer,
@@ -607,10 +614,14 @@ export default class Table extends React.PureComponent {
       onRowMouseOver,
       onRowMouseOut,
       rowClassName,
+      rowKeyGetter,
       rowGetter,
       rowRenderer,
       rowStyle,
     } = this.props;
+
+    const rowId =
+      typeof rowKeyGetter === 'function' ? rowKeyGetter({index}) : key;
 
     const {scrollbarWidth} = this.state;
 
@@ -647,7 +658,7 @@ export default class Table extends React.PureComponent {
       columns,
       index,
       isScrolling,
-      key,
+      key: rowId,
       onRowClick,
       onRowDoubleClick,
       onRowRightClick,
