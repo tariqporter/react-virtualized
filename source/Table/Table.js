@@ -178,6 +178,11 @@ export default class Table extends React.PureComponent {
     rowHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func])
       .isRequired,
 
+    /**
+     * A fixed row height (number) for the height of the dragging row
+     */
+    dragRowHeight: PropTypes.number,
+
     /** Number of rows in table. */
     rowCount: PropTypes.number.isRequired,
 
@@ -248,6 +253,7 @@ export default class Table extends React.PureComponent {
     onRowsRendered: () => null,
     onScroll: () => null,
     rowKeyGetter: null,
+    dragRowHeight: 30,
     overscanIndicesGetter: accessibilityOverscanIndicesGetter,
     overscanRowCount: 10,
     rowRenderer: defaultRowRenderer,
