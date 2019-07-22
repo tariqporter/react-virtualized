@@ -659,7 +659,6 @@ export default class Table extends React.PureComponent {
     const flattenedStyle = {
       ...style,
       height: this._getRowHeight(index),
-      overflow: 'hidden',
       paddingRight: scrollbarWidth,
       ...rowStyleObject,
     };
