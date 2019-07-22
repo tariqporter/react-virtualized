@@ -1,6 +1,7 @@
 /** @flow */
 
 import * as React from 'react';
+import Proptype from 'prop-types';
 import * as Draggable from 'react-draggable';
 import injectSheet from 'react-jss';
 import clsx from 'clsx';
@@ -74,5 +75,17 @@ class DragRowRenderer extends React.Component {
     );
   }
 }
+
+DragRowRenderer.propTypes = {
+  dragStart: Proptype.func,
+  drag: Proptype.func,
+  dragStop: Proptype.func,
+};
+
+DragRowRenderer.defaultProps = {
+  dragStart: () => {},
+  drag: () => {},
+  dragStop: () => {},
+};
 
 export default injectSheet(styles)(DragRowRenderer);
