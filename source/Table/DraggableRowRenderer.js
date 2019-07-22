@@ -46,6 +46,7 @@ class DragRowRenderer extends React.Component {
       columns,
       rowData,
       style,
+      dragRowHeight,
       dragRowId,
       offsetRows,
       dragRowStyle,
@@ -55,8 +56,9 @@ class DragRowRenderer extends React.Component {
     // isDragging
     if (dragRowId === rowData.id) {
       const top =
-        offsetRows < 0 ? dragRowStyle.top - style.height : dragRowStyle.top;
+        offsetRows <= 0 ? dragRowStyle.top - dragRowHeight : dragRowStyle.top;
       newStyle.transform = `translateY(${top}px)`;
+      newStyle.height = dragRowHeight;
     }
 
     return (
