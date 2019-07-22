@@ -3,7 +3,7 @@
   "description": "React components for efficiently rendering large, scrollable lists and tabular data",
   "author": "Brian Vaughn <brian.david.vaughn@gmail.com>",
   "user": "bvaughn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://github.com/tariqporter/react-virtualized/tree/draggable-rows",
   "main": "dist/commonjs/index.js",
   "module": "dist/es/index.js",
